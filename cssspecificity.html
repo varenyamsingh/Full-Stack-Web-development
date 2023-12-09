@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Specificity</title>
+    <style>
+      h1 {
+        background-color: chocolate;
+        color: aqua;
+      }
+      .yellow {
+        color: yellow;
+      }
+      .cpurple {
+        color: purple;
+      }
+      .cred {
+        color: red;
+      } /*agar ek element me humne kai saare names/class diye hai toh jo last me class likhenge css file me wahi apply hoga ek dam latest likha hua wala*/
+      h2 {
+        color: aqua;
+      }
+      .new {
+        color: grey;
+      }
+      .old {
+        color: blue;
+      }
+      [data-x="a"] {
+        background-color: blueviolet;
+        /*this above thing is called attribute selector*/
+      }
+      /*inline style ko sabse zyada priority milti hai jo hum apne html element me use karte hai style attribute laga k jaise h2 me use kiye hai style attribute.*/
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1 class="yellow cred cpurple" data-x="a">CSS Specificity</h1>
+      <h2 style="color: chocolate" class="new old">
+        Lorem ipsum dolor sit amet.
+      </h2>
+
+      <h1 style="color: black" ;>
+        Inline Style > ID Selector > Class or Attribute Selector > Element
+        Selector > Universal Selector
+      </h1>
+    </div>
+
+    <!-- This is the priority order list -->
+    <!-- Inline Style > ID Selector > Class or Attribute Selector > Element Selector > Universal Selector -->
+  </body>
+</html>
