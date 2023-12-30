@@ -18,8 +18,8 @@
       }
       .div1 {
         border-radius: 10px;
-        height: 30vh;
-        width: 20vw;
+        --height: 30vh;
+        --width: 20vw;
       }
       .image {
         border-radius: 15px;
@@ -27,11 +27,18 @@
         width: 19vw;
         padding: 2px;
       }
+      span{
+        border: 2px solid;
+        border-radius: 10px;
+        padding: 3px;
+      }
       button{
         border-radius: 6px;
+        border: none;
+        background-color: lightgreen;
       }
       button:hover {
-        background-color: gray;
+        background-color: rgb(11, 198, 42);
       }
     </style>
   </head>
@@ -41,7 +48,7 @@
         <img class="image" src="nature.jpeg" alt="" />
       </div>
       <div class="div2">
-        <span>Nature |</span>
+        <span>Nature</span>
         <span>Lake</span>
       </div>
       <div class="div3">
